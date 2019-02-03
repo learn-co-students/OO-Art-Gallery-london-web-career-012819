@@ -43,7 +43,7 @@ class Artist
     #   * Returns an `instance` of the artist with the highest amount of paintings per year of experience.
     # artist.paintings.length / artist.years_experience
     arr = self.all.sort_by {|artist| artist.paintings.length/artist.years_experience}.reverse
-    arr
+    arr[0]
   end
 
   def create_painting(title, price, gallery)
