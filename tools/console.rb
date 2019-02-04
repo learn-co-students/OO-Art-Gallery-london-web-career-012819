@@ -1,7 +1,7 @@
 require_relative '../config/environment.rb'
 
 
-peder = Artist.new("Peder", 5)
+peder = Artist.new("Peder", 20)
 fia = Artist.new("Fia", 10)
 luc = Artist.new("Luc", 15)
 erika = Artist.new("Erika", 3)

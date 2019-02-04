@@ -16,4 +16,8 @@ class Painting
     @@all
   end
 
+  def self.total_price
+    @@all.map { |painting| painting.price  }.inject(:+)
+  end
+
 end

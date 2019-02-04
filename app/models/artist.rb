@@ -32,11 +32,11 @@ class Artist
     arr.reduce(:+)
   end
 
-  # def self.most_prolific
-  # arr = @@all.sort_by { |artist| artist.years_experience }
-  # sorted_arr = arr.reverse
-  # artist_arr = @@all.sort_by { |artist| artist.name }
-  # end
+  def self.most_prolific
+  self.all.max_by do |artist|
+    (artist.paintings.length / artist.years_experience.to_f)
+  end
+  end
 
   def create_painting(title, price, gallery)
     Painting.new(title, price, self, gallery)
